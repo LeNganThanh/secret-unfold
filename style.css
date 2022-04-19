@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.unfold {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  margin: 10rem auto;
+  line-height: 20rem;
+  text-align: center;
+}
+/* .item:hover {
+  transition: all 2s;
+}
+ */.item {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  transition: 1s;
+}
+.blue {
+  background-color: steelblue;
+  top: 0;
+  left: 0;
+}
+.gray {
+  background-color: dimgray;
+  top: 0;
+  left: 10rem;
+}
+.yellow {
+  background-color: yellow;
+  top: 10rem;
+  left: 0;
+}
+.brown {
+  background-color: rosybrown;
+  top: 10rem;
+  left: 10rem;
+}
+.unfold:hover .blue {
+  left: -10rem;
+  transform: rotate(90deg);
+}
+.unfold:hover .gray {
+  left: 20rem;
+  transform: rotate(-90deg);
+}
+.unfold:hover .yellow {
+  left: -10rem;
+  transform: rotate(-90deg);
+}
+.unfold:hover .brown {
+  left: 20rem;
+  transform: rotate(90deg);
+}
