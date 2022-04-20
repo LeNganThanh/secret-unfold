@@ -1,3 +1,14 @@
+:root{
+  font-size: 62.5%;
+  --blue-color: steelblue;
+  --gray-color: dimgray;
+  --yellow-color: yellow;
+  --brown-color: rosybrown;
+  --unfold-size: 30rem;
+  --translate-right: 15rem;
+  --transition-time: 1s;
+  --translate-left: -15rem
+}
 *,
 *::before,
 *::after {
@@ -7,54 +18,48 @@
 }
 .unfold {
   position: relative;
-  width: 20rem;
-  height: 20rem;
+  width: var(--unfold-size);
+  height: var(--unfold-size);
   margin: 10rem auto;
-  line-height: 20rem;
+  line-height: var(--unfold-size);
   text-align: center;
+  font-size: 3rem;
 }
-/* .item:hover {
-  transition: all 2s;
-}
- */.item {
-  width: 10rem;
-  height: 10rem;
+.item {
+  width: 50%;
+  height: 50%;
   position: absolute;
-  transition: 1s;
+  transition: var(--transition-time);
 }
 .blue {
-  background-color: steelblue;
+  background-color: var(--blue-color);
   top: 0;
   left: 0;
 }
 .gray {
-  background-color: dimgray;
+  background-color: var(--gray-color);
   top: 0;
-  left: 10rem;
+  right: 0;
 }
 .yellow {
-  background-color: yellow;
-  top: 10rem;
+  background-color: var(--yellow-color);
+  bottom: 0;
   left: 0;
 }
 .brown {
-  background-color: rosybrown;
-  top: 10rem;
-  left: 10rem;
+  background-color: var(--brown-color);
+  bottom: 0;
+  right: 0;;
 }
 .unfold:hover .blue {
-  left: -10rem;
-  transform: rotate(90deg);
+  transform: translate(var(--translate-left)) rotate(90deg);
 }
 .unfold:hover .gray {
-  left: 20rem;
-  transform: rotate(-90deg);
+  transform: translate(var(--translate-right)) rotate(-90deg);
 }
 .unfold:hover .yellow {
-  left: -10rem;
-  transform: rotate(-90deg);
+  transform: translate(var(--translate-left)) rotate(-90deg);
 }
 .unfold:hover .brown {
-  left: 20rem;
-  transform: rotate(90deg);
+  transform: translate(var(--translate-right)) rotate(90deg);
 }
